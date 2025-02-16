@@ -89,13 +89,14 @@ body {
     line-height: 1.5;
 }
 
-.hero_button {
+.button {
     display: inline-block;
     background-color: var(--pink);
     text-decoration: none;
     color: var(--very-pale-blue);
     padding: .7em 2.8em;
     border-radius: 25px;
+    box-shadow: 0 0 3px hsl(322, 100%, 66%, .3);
 }
 
 .hero_img {
@@ -143,4 +144,26 @@ body {
     display: flex;
     flex-direction: column;
     gap: 80px;
+}
+
+.email {
+    padding: var(--padding-section);
+    background-color: #fff;
+    background-image:linear-gradient(
+        #fff 50%, 
+        var(--very-dark-cyan) 50%
+    );
+}
+
+.email_container {
+    background-color: #fff;
+    text-align: center;
+    padding: 3em 2em;
+    box-shadow: 0 0 3px hsl(192, 100%, 9%, .3);
+    border-radius: 8px;
+} 
+
+.email_title {
+    font-size: 1.8rem;
+    margin-bottom: 2rem;
 }
