@@ -1,0 +1,109 @@
+:root {
+    --family-headings: 'Poppins', sans-serif;
+    --family-body: 'Open Sans', sans-serif;
+
+    /* Primary */
+    --pink: hsl(322, 100%, 66%);
+    --light-pink: hsl(321, 100%, 78%);
+    --light-red: hsl(0, 100%, 63%);
+
+    /* Neutral */
+    --very-dark-cyan: hsl(192, 100%, 9%);
+    --very-pale-blue: hsl(207, 100%, 98%);
+
+    --padding-section: 90px 0;
+}
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+    outline: 1px solid red;   
+}
+
+body {
+    font-family: var(--family-body);
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    overflow: hidden;
+    margin: 0 auto;
+    padding: var(--padding-section); /* Padding solo para el section de 90px 0 */
+}
+
+.hero {
+    --padding-section: 0 0 60px 0; /* Padding en el header solo del bottom */
+    /* padding-bottom: 30px; */
+    background-color: var(--very-pale-blue);
+    background-image: url('../images/bg-section-top-mobile-2.svg');
+    background-size: cover;
+    background-position: center;
+}
+
+.nav {
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    --padding-section: 0; /* Lo ponemos así por el border-box, no suma el padding (esta propiedad se aplica a todos los de la clase container) */
+}
+
+.nav_logo {
+    width: 100%;
+    max-width: 150px;
+    display: block;
+}
+
+.nav_cta {
+    text-decoration: none;
+    color: var(--very-dark-cyan);
+    font-weight: 700;
+    background-color: var(--very-pale-blue);
+    padding: .5em 1.5em;/* No va a cambiar el tamaño, su padre no tiene font-size */
+    border-radius: 30px;
+    box-shadow: 0 0 10px -3px hsl(192 100% 9% / .4);
+    margin-right: 2px;
+}
+
+/* Contenido principal del header */
+.hero_main {
+    padding-top: 60px; 
+    display: flex; /* Para el espaciado entre columnas utilizamos flex-box con gap*/
+    flex-direction: column;
+    gap: 40px;
+}   
+
+.hero_texts {
+    text-align: center;
+}
+
+.hero_title {
+    font-size: 2rem;
+    font-family: var(--family-headings);
+}
+
+.hero_paragraph {
+    margin: 1rem 0;
+    line-height: 1.5;
+}
+
+.hero_button {
+    display: inline-block;
+    background-color: var(--pink);
+    text-decoration: none;
+    color: var(--very-pale-blue);
+    padding: .7em 2.8em;
+    border-radius: 25px;
+}
+
+.hero_img {
+    width: 100%;
+    max-width: 500px;
+    display: block;
+    margin: 0 auto;
+}
+
+.section {
+    background-color: #000;
+}
